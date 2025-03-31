@@ -24,11 +24,36 @@ Examples
 1. Dowload video/playlist with subtitle
 yt-dlp "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"\
     --cookies "/Users/meysam/Downloads/www.youtube.com_cookies (2).txt"\
-    -o "/Users/meysam/Downloads/youtube/%(title)s_%(ext)s.mp4"\
+    -o "/Users/meysam/Downloads/%(title)s_%(ext)s.mp4"\
     --ffmpeg-location "/Users/meysam/Documents/binary"\
     --no-keep-fragments\
     --write-subs --embed-subs\
     -f 'bv*[ext=mp4][height>480]+ba' 
+
+
+    yt-dlp "https://www.youtube.com/watch?v=rk24OUu_kJQ"\
+    --cookies "/Users/meysam/Downloads/www.youtube.com_cookies ().txt"\
+    -o "/Users/meysam/Downloads/%(title)s_%(ext)s.mp4"\
+    --ffmpeg-location "/Users/meysam/Documents/binary"\
+    --no-keep-fragments\
+    -f 'bv*[ext=mp4][height>720]+ba'\
+    --no-check-certificate
+    --extractor-args "youtube:player_client=web"
+
+
+yt-dlp "https://www.youtube.com/watch?v=sN4QqxrG7JA"\
+    --cookies "/Users/meysam/Downloads/www.youtube.com_cookies (7).txt"\
+    -o "/Users/meysam/Downloads/%(title)s_%(ext)s.mp4"\
+    --ffmpeg-location "/Users/meysam/Documents/binary"\
+    --no-keep-fragments\
+    -f 'bv*[ext=mp4][height>720]+ba'\
+    --no-check-certificate
+
+    yt-dlp "https://www.youtube.com/watch?v=rk24OUu_kJQ"\
+    --cookies "/Users/meysam/Downloads/www.youtube.com_cookies (4).txt"\
+    --extractor-args "youtube:player_client=web"\
+    --list-formats
+
 
 
     --write-auto-subs --embed-subs\

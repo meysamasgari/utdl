@@ -1,3 +1,5 @@
+last update: 2025-04-04
+
 # How to download youtube video/playlist in best quality with embedded subtitles via python(yt_dlp)
 
 # Requirements
@@ -39,7 +41,8 @@ python3 --version
 # Description
 ```
 
-![Description](/images/img2.png)
+
+![alt text](images/img2.png)
 
 
 ```
@@ -56,10 +59,20 @@ yt-dlp "https://www.youtube.com/watch?v=PUPqnDYoMgU"\
     -f 'bv*[ext=mp4][height>480]+ba' 
 ```
 
+yt-dlp "https://www.youtube.com/watch?v=PUPqnDYoMgU"\
+    --cookies "/Users/meysam/Downloads/www.youtube.com_cookies.txt"\
+    -o "/Users/meysam/Downloads/%(title)s_%(ext)s.mp4"\
+    --ffmpeg-location "/Users/meysam/Documents/Develop/utdl/ffmpeg"\
+    --no-keep-fragments\
+    --compat-options no-certifi\ 
+    --write-subs --embed-subs\
+    -f 'bv*[ext=mp4][height>480]+ba'
+
 # Example 2. Dowload a section of video
 ```
-yt-dlp "https://www.youtube.com/watch?v=MNw9x53Ybos&t=27s"\
+yt-dlp "https://www.youtube.com/watch?v=MNw9x53Ybos"\
     --cookies "/Users/meysam/Downloads/www.youtube.com_cookies (10).txt"\
+    --compat-option no-certifi\  
     -o "/Users/meysam/Downloads/youtube/%(title)s_%(ext)s.mp4"\
     --ffmpeg-location "/Users/meysam/Documents/binary"\
     --no-keep-fragments\
@@ -75,6 +88,14 @@ yt-dlp "https://www.youtube.com/watch?v=5-J1t0rAlOU"\
     -o "/Users/meysam/Downloads/youtube/%(title)s_%(ext)s.mp3"\
     --no-keep-fragments\
     -f 'ba'
+```
+
+
+# upgrade
+```
+yt-dlp --version
+check yt-dlp github repository for latest version
+
 ```
 
 

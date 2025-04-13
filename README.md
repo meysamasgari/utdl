@@ -47,28 +47,31 @@ python3 --version
 
 ```
 
-# Example 1. Dowload video/playlist with subtitle
+# Example 1. Dowload video/playlist with subtitle using cookies
 ```
-yt-dlp "https://www.youtube.com/watch?v=PUPqnDYoMgU"\
+yt-dlp "https://www.youtube.com/watch?v=rH0bpx7I2Dk"\
     --cookies "/Users/meysam/Downloads/www.youtube.com_cookies.txt"\
     -o "/Users/meysam/Downloads/%(title)s_%(ext)s.mp4"\
     --ffmpeg-location "/Users/meysam/Documents/Develop/utdl/ffmpeg"\
     --no-keep-fragments\
-    --no-check-certificate\ 
+    --no-check-certificates\
     --write-subs --embed-subs\
     -f 'bv*[ext=mp4][height>480]+ba' 
 ```
 
-yt-dlp "https://www.youtube.com/watch?v=PUPqnDYoMgU"\
-    --cookies "/Users/meysam/Downloads/www.youtube.com_cookies.txt"\
+# Example 2. Dowload video/playlist with subtitle using browser
+```
+yt-dlp "https://www.youtube.com/watch?v=rH0bpx7I2Dk"\
+    --cookies-from-browser chrome\
     -o "/Users/meysam/Downloads/%(title)s_%(ext)s.mp4"\
     --ffmpeg-location "/Users/meysam/Documents/Develop/utdl/ffmpeg"\
     --no-keep-fragments\
-    --compat-options no-certifi\ 
+    --no-check-certificates\
     --write-subs --embed-subs\
-    -f 'bv*[ext=mp4][height>480]+ba'
+    -f 'bv*[ext=mp4][height>480]+ba' 
+```
 
-# Example 2. Dowload a section of video
+# Example 3. Dowload a section of video
 ```
 yt-dlp "https://www.youtube.com/watch?v=MNw9x53Ybos"\
     --cookies "/Users/meysam/Downloads/www.youtube.com_cookies (10).txt"\
@@ -81,7 +84,7 @@ yt-dlp "https://www.youtube.com/watch?v=MNw9x53Ybos"\
     -f 'bv*[ext=mp4][height>480]+ba'
 ```
 
-# Example 3. Dowload music
+# Example 4. Dowload music
 ```
 yt-dlp "https://www.youtube.com/watch?v=5-J1t0rAlOU"\
     --cookies "/Users/meysam/Downloads/www.youtube.com_cookies.txt"\
@@ -91,11 +94,10 @@ yt-dlp "https://www.youtube.com/watch?v=5-J1t0rAlOU"\
 ```
 
 
-# upgrade
-```
-yt-dlp --version
-check yt-dlp github repository for latest version
+# note 1
+update yt-dlp to latest version
+yt-dlp -Uv
 
-```
-
-
+# note 2
+install or update certifi on your os
+python3 -m pip install certifi 

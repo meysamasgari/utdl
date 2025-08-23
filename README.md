@@ -34,13 +34,6 @@ python3 --version
 
 ```
 # Description
-```
-
-
-![alt text](images/img2.png)
-
-
-```
 
 # Example 1. Dowload video/playlist with subtitle using cookies
 ```
@@ -77,10 +70,8 @@ yt-dlp "https://www.youtube.com/watch?v=5-J1t0rAlOU"\
 ```
 
 
-# note 1
-update yt-dlp to latest version
-yt-dlp -Uv
-
-# note 2
-install or update certifi on your os
-python3 -m pip install certifi 
+# note (always update utdl before downloading)
+```
+1- install or update certifi on your os -> python3 -m pip install certifi
+2- update yt-dlp to latest version -> yt-dlp -Uv
+```

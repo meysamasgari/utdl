@@ -1,4 +1,4 @@
-last update: 2025-08-23
+last update: 2025-08-24
 
 # How to download youtube video/playlist in best quality with embedded subtitles via python(yt_dlp)
 
@@ -54,21 +54,12 @@ yt-dlp "https://www.youtube.com/watch?v=MNw9x53Ybos"\
 ```
 ## Example 3. Dowload music
 ```
-mac (terminal):
 yt-dlp "https://www.youtube.com/watch?v=f2AnmLp3wvo"\
     --cookies-from-browser chrome\
     --no-keep-fragments\
     -o "/Users/meysam/Downloads/youtube/%(title)s_%(ext)s.mp3"\
     -f 'ba'
-
-win (powershell):
-.\yt-dlp.exe "https://www.youtube.com/watch?v=y-d9WbR0emI" `
-    --cookies \\Mac\Home\Downloads\www.youtube.com_cookies.txt `
-    --no-keep-fragments `
-    -o "\\Mac\Home\Downloads\%(title)s_%(ext)s.mp3" `
-    -f 'ba'
 ```
-
 
 
 # WINDOWS

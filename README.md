@@ -54,7 +54,7 @@ yt-dlp "https://www.youtube.com/watch?v=MNw9x53Ybos"\
 ```
 ## Example 3. Dowload music
 ```
-yt-dlp "https://www.youtube.com/watch?v=f2AnmLp3wvo"\
+yt-dlp "https://www.youtube.com/watch?v=FR1WBmpLgRU"\
     --cookies-from-browser chrome\
     --no-keep-fragments\
     -o "/Users/meysam/Downloads/youtube/%(title)s_%(ext)s.mp3"\
@@ -69,15 +69,17 @@ yt-dlp "https://www.youtube.com/watch?v=f2AnmLp3wvo"\
 python3 --version 
 
 2. download and install yt-dlp.exe (https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe)
-note: it is not executable. You can use it as coomand
+note: create a folder in drive C and add yt-dlp.exe to it. then add its path to env variable. now you can use yt-dlp command in cmd
 
-3. download and install ffmpeg.exe file (https://www.ffmpeg.org/download.html)
-note: install is needed
+3. download and install ffmpeg.exe file (https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-2025-08-25-git-1b62f9d3ae-full_build.7z)
+note: create a folder in drive C and add ffmpeg.exe to it. then add its path to env variable. now you can use ffmpeg command in cmd
+
+4. add get cookies plugin (chrome extension) and login to youtube and extract cookies. then give file path to the command
 ```
 
 ## Example 1. Dowload video/playlist with subtitle using cookies
 ```
-.\yt-dlp.exe "https://www.youtube.com/watch?v=MNw9x53Ybos" `
+yt-dlp "https://www.youtube.com/watch?v=MNw9x53Ybos" `
     --cookies \\Mac\Home\Downloads\www.youtube.com_cookies.txt `
     --no-check-certificates `
     --no-keep-fragments `
@@ -87,7 +89,7 @@ note: install is needed
 ```
 ## Example 2. Dowload a section of video
 ```
-.\yt-dlp.exe "https://www.youtube.com/watch?v=MNw9x53Ybos" `
+yt-dlp "https://www.youtube.com/watch?v=MNw9x53Ybos" `
     --cookies \\Mac\Home\Downloads\www.youtube.com_cookies.txt `
     --no-check-certificates `
     --no-keep-fragments `
@@ -99,7 +101,7 @@ note: install is needed
 ```
 ## Example 3. Dowload music
 ```
-.\yt-dlp.exe "https://www.youtube.com/watch?v=y-d9WbR0emI" `
+yt-dlp "https://www.youtube.com/watch?v=FR1WBmpLgRU" `
     --cookies \\Mac\Home\Downloads\www.youtube.com_cookies.txt `
     --no-keep-fragments `
     -o "\\Mac\Home\Downloads\%(title)s_%(ext)s.mp3" `
